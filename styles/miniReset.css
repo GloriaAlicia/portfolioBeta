@@ -1,0 +1,21 @@
+*:focus{
+    outline: solid 1px #fff;
+}
+h1, h2, h3, h4{
+    margin: 0;
+}
+button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+ul{
+    margin: 0;
+}
+input{
+    border: transparent;
+}
+textarea{
+    resize: none;
+    background-color: var(--white);
+}
