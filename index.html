@@ -344,33 +344,28 @@ M307.029663,281.680725
 			</div>
 		</section>
 
-		<section class="form" id="contacto">
+		<section class="form">
 			<h2 class="title">Formulario de contacto</h2>
 			<p class="subtitle paragraph">Me contactaré de inmediato con usted</p>
-			<form action="#" class="form_container">
+			<form class="form_container" id="form" action="https://formspree.io/f/mayvzozy" method="POST">
 
 				<div class="form_field margin-bottom">
 					<label for="name" class="form_label">Nombre</label>
-					<input class="form_field_input" id="name" type="text">
+					<input type="text" class="form_field_input" id="name" name="name" required maxlength="50">
 				</div>
 
 				<div class="form_field margin-bottom">
 					<label for="email" class="form_label">Email</label>
-					<input class="form_field_input" id="email" type="text">
+					<input type="email" class="form_field_input" id="email" name="email" required>
 				</div>
 
 				<div class="form_field margin-bottom">
-					<label for="asunto" class="form_label">Asunto</label>
-					<textarea class="form_field_textarea" name="asunto" id=""></textarea>
-				</div>
-
-				<div class="form_field margin-bottom">
-					<label for="messange" class="form_label">Mensaje</label>
-					<textarea class="form_field_textarea" name="asunto" id=""></textarea>
+					<label for="message" class="form_label">Mensaje</label>
+					<textarea class="form_field_textarea" name="message" id="message" required></textarea>
 				</div>
 
 				<div class="projects_container_buttons">
-					<button type="submit" class="projects_container_button">
+					<button type="submit" class="projects_container_button" id="sendButton">
 						Enviar
 					</button>
 				</div>
