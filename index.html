@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="./styles/normalize.css">
 	<link rel="stylesheet" href="./styles/miniReset.css">
 	<link rel="stylesheet" href="./styles/syle.css">
+	<link rel="shortcut icon" href="./assets/icons/myLogo.svg">
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,15 +21,21 @@
 	<main class="containerAll">
 		<nav class="menu">
 			<ul class="menu_element">
-				<li>
-					<img class="logo" src="./assets/icons/myLogo.svg" alt="Gloria Alicia Garcia Garcia">
-				</li>
-			</ul>
-			<ul class="menu_element">
 				<li><a class="menu_element_link" href="#sobremi">Sobre mí</a></li>
 				<li><a class="menu_element_link" href="#educacion">Educacion</a></li>
 				<li><a class="menu_element_link" href="#proyectos">Proyectos</a></li>
 				<li><a class="menu_element_link" href="#contacto">Contacto</a></li>
+			</ul>
+		</nav>
+
+		<img id="openMobil" class="logo" src="./assets/icons/myLogo.svg" alt="Gloria Alicia Garcia Garcia">
+
+		<nav class="menu-mobil hidden" id="content">
+			<ul class="menu-mobil_container">
+				<li><a class="menu-mobil_element_link" href="#sobremi">Sobre mí</a></li>
+				<li><a class="menu-mobil_element_link" href="#educacion">Educacion</a></li>
+				<li><a class="menu-mobil_element_link" href="#proyectos">Proyectos</a></li>
+				<li><a class="menu-mobil_element_link" href="#contacto">Contacto</a></li>
 			</ul>
 		</nav>
 		
@@ -342,29 +349,37 @@ M307.029663,281.680725
 			<p class="subtitle paragraph">Me contactaré de inmediato con usted</p>
 			<form action="#" class="form_container">
 
-				<div class="form_field">
+				<div class="form_field margin-bottom">
 					<label for="name" class="form_label">Nombre</label>
-					<input id="name" type="text">
+					<input class="form_field_input" id="name" type="text">
 				</div>
 
-				<div class="form_field">
+				<div class="form_field margin-bottom">
 					<label for="email" class="form_label">Email</label>
-					<input id="email" type="text">
+					<input class="form_field_input" id="email" type="text">
 				</div>
 
-				<div class="form_field">
+				<div class="form_field margin-bottom">
 					<label for="asunto" class="form_label">Asunto</label>
-					<textarea name="asunto" id=""></textarea>
+					<textarea class="form_field_textarea" name="asunto" id=""></textarea>
 				</div>
 
-				<div class="form_field">
+				<div class="form_field margin-bottom">
 					<label for="messange" class="form_label">Mensaje</label>
-					<textarea name="asunto" id=""></textarea>
+					<textarea class="form_field_textarea" name="asunto" id=""></textarea>
 				</div>
 
+				<div class="projects_container_buttons">
+					<button type="submit" class="projects_container_button">
+						Enviar
+					</button>
+				</div>
+				
 			</form>
 		</section>
 	</main>
+
+	<script src="./scripts/app.js"></script>
 </body>
 
 </html>

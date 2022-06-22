@@ -13,17 +13,13 @@
 
     --container-width:80%;
     --height_menu:6vh;
-    --height_landing:92vh;
+    --height_landing:95vh;
 }
 /******************generales*************************/
 .title{
     font-family: "Noto Sans", sans-serif;
     font-style: italic;
     font-size: 2.5rem;
-}
-[title]{
-    background-color: var(--white);
-    border-radius: var(--radius);
 }
 .subtitle{
     font-family: "Noto Sans", sans-serif;
@@ -47,8 +43,8 @@
     flex-direction: column;
 
     background-image: 
-    radial-gradient(circle farthest-side at 65% 50%, var(--purple) 0px, transparent 60%), 
-    radial-gradient(circle farthest-side at 100% 0%, var(--pink) 0px, transparent 60%), 
+    radial-gradient(circle farthest-side at 85% 30%, var(--purple) 0px, transparent 60%), 
+    radial-gradient(circle farthest-side at 100% 0%, var(--pink) 0px, transparent 50%), 
     radial-gradient(at 0% 35%, var(--blue) 0px, transparent 50%), 
     radial-gradient(circle farthest-side at 0% 100%, rgb(107, 102, 255) 0px, transparent 45%);
 }
@@ -64,7 +60,10 @@
     background-color: var(--white);
     font-family: "Noto Sans", sans-serif;
 }
-/******************menu*************hasta 500px**********/
+.hidden{
+    display: none;
+}
+/******************menu***********************/
 .menu{
     display: flex;
     position: sticky;
@@ -93,18 +92,56 @@
 .menu_element_link:hover{
     color: var(--purple);
 }
-.logo{
-    height: 1.8rem;
-    padding: 0.2vw;
+/*------------------menu-mobil-----------------*/
+.menu-mobil{
+    width: 100%;
+
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    position: fixed;
+
+    background-color: #fff;
+}
+.menu-mobil_container{
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    z-index: 2;
+}
+.menu-mobil_element_link{
+    font-family: "Noto Sans", sans-serif;
+    font-size: medium;
+    color: var(--black);
+}
+.logo{
+    padding: 2vw 3vw;
+    height: 1.8rem;
+
+    top:90%;
+    left: 85%;
+    position: fixed;
+    display: none;
+
+    text-align: center;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow:  22px 22px 62px #e2e2e2, -22px -22px 62px #ffffff;
+    z-index: 2;
 }
 /******************landing**********************/
 .landing{
     height: var(--height_landing);
     width: 100%;
-    position: relative;
+    /* position: relative; */
     overflow: hidden;
-   
 
     display: flex;
     justify-content: flex-start;
@@ -133,7 +170,7 @@
 /*-----------------------botones-------------------------*/
 .socialNetwork{
     display: flex;
-    position: relative;
+    /* position: relative; */
     transition: all 0.3s ease-in-out;
 }
 button.socialButton{
@@ -204,6 +241,10 @@ button.socialButton span{
 .skills{
     width: var(--container-width);
     min-height: var(--height_landing);
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 .skills_container{
     display: grid;
@@ -213,9 +254,6 @@ button.socialButton span{
 .skills_container .skill img{
     height: 30px;
     margin-right: 0.5rem;
-}
-.courses{
-    width: var(--container-width);
 }
 .courses_education_container{
     display: flex;
@@ -238,13 +276,17 @@ button.socialButton span{
 .projects{
     width: var(--container-width);
     min-height: var(--height_landing);
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 .projects_container{
     display: flex;
     gap: 1vw;
 }
 .projects_container_item{
-    width: 50%;
+    width: 45%;
 }
 .projects_container_item_image{
     width: 100%;
@@ -276,18 +318,78 @@ button.socialButton span{
 .form{
     width: var(--container-width);
     min-height: var(--height_landing);
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 .form_container{
     display: flex;
     flex-direction: column;
 }
-.form input{
-    background-color: transparent;
-    border-bottom: solid 1px var(--black);
+.form_field{
+    display: flex;
+    flex-direction: column;
+}
+.form_field_input{
+    padding: 0.5rem;
+    border: solid 1px var(--white);
+    border-radius: var(--radius);
+}
+.form_field_textarea{
+    padding: 0.5rem;
+    border: solid 1px var(--white);
+    border-radius: var(--radius);
+    height: 30%;
 }
 /******************breakpoints**********************/
 @media screen and (max-width:600px) {
+    .landing{
+        justify-content: center;
+    }
     .landing_details{
         max-width: 60vw;
+        padding: 0;
+    }
+    .landing_logo{
+        display: none;
+    }
+    .about_info{
+        flex-direction: column;
+    }
+    .about_info_personal-details{
+        margin-bottom: 5vh;
+    }
+    .about_info_soft-skills{
+        padding: 0;
+    }
+    .skills_container{
+        gap: 2vw;
+    }
+    .courses_education_container{
+        flex-direction: column;
+    }
+    .courses_education_bootcamp{
+        padding: 2vw;
+    }
+    .projects_container{
+        flex-direction: column;
+    }
+    .projects_container_item{
+        width: 100%;
+    }
+}
+@media screen and (max-width:450px){
+    .menu{
+        display: none;
+    }
+    .logo{
+        display: block;
+    }
+    .landing_details{
+        max-width: 85vw;
+    }
+    .courses_education_bootcamp{
+        padding: 3vw;
     }
 }

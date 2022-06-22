@@ -1,5 +1,5 @@
 *:focus{
-    outline: solid 1px #fff;
+    outline: solid 3px var(--white);
 }
 h1, h2, h3, h4{
     margin: 0;
@@ -12,10 +12,15 @@ button{
 ul{
     margin: 0;
 }
+label{
+    margin-bottom: 0.3rem;
+}
 input{
     border: transparent;
+    background-color: transparent;
 }
 textarea{
     resize: none;
-    background-color: var(--white);
+    border: none;
+    background-color: transparent;
 }
