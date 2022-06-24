@@ -14,3 +14,14 @@ document.body.addEventListener("change",(e)=>{
         }
     }
 })
+/**ejecutando al cargar */
+function showProject(){
+    const choose = document.querySelector("input[name='slider']:checked");
+    const $hangman = document.getElementById("contentHangmanGame");
+    const $notes = document.getElementById("contentNotes");
+    
+    $hangman.classList.remove("hidden");
+    $notes.classList.add("hidden");
+}
+
+showProject()

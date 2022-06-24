@@ -21,7 +21,7 @@
 /******************generales*************************/
 .title {
     font-family: "Noto Sans", sans-serif;
-    font-style: italic;
+    font-weight: 300;
     font-size: 2.5rem;
 }
 
@@ -29,7 +29,7 @@
     color: var(--fontColor);
 
     font-family: "Noto Sans", sans-serif;
-    font-style: italic;
+    font-weight: 300;
     font-size: 1.4rem;
     margin-bottom: 2vh;
 }
@@ -481,6 +481,7 @@ input[name="slider"]:checked + label{
         background-image:
             radial-gradient(circle farthest-side at 85% 30%, var(--purple) 0px, transparent 20%),
             radial-gradient(circle farthest-side at 100% 0%, var(--blue) 0px, transparent 20%),
+            radial-gradient(circle farthest-side at 0% 0%, rgb(255 0 227) 0%, transparent 50%),
             radial-gradient(at 0% 35%, var(--blue) 0px, transparent 40%),
             radial-gradient(circle farthest-side at 0% 100%, rgb(107, 102, 255) 0px, transparent 35%);
     }
