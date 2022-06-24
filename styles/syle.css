@@ -1,54 +1,67 @@
-:root{
+:root {
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
-    color: var(--black);
-    --radius:7px;
+    color: var(--fontColor);
+    scroll-behavior: smooth;
+    --radius: 7px;
     --purple: #c08cff;
     --morePurple: #a75fff;
-    --pink:#fc65b8c9;
-    --blue:#a4e2fb;
-    --gray-disabled:rgba(0, 0, 0, 0.301);
+    --pink: #850938ad;
+    --blue: #008080;
+    --gray-disabled: rgba(0, 0, 0, 0.301);
     --black: rgb(22, 22, 22);
-    --white:rgba(255, 255, 255, 0.28);
+    --fontColor: #fff;
+    --white: rgba(235, 235, 235, 0.151);
 
-    --container-width:80%;
-    --height_menu:6vh;
-    --height_landing:95vh;
+    --container-width: 80%;
+    --height_menu: 6vh;
+    --height_landing: 95vh;
 }
+
 /******************generales*************************/
-.title{
+.title {
     font-family: "Noto Sans", sans-serif;
     font-style: italic;
     font-size: 2.5rem;
 }
-.subtitle{
+
+.subtitle {
+    color: var(--fontColor);
+
     font-family: "Noto Sans", sans-serif;
     font-style: italic;
     font-size: 1.4rem;
     margin-bottom: 2vh;
 }
-.paragraph{
-    margin:5px 0;
+
+.paragraph {
+    margin: 5px 0;
 }
-.margin-top{
+
+.margin-top {
     margin-top: 5vh;
 }
-.margin-bottom{
+
+.margin-bottom {
     margin-bottom: 5vh;
 }
-.containerAll{
+
+.containerAll {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 
-    background-image: 
-    radial-gradient(circle farthest-side at 85% 30%, var(--purple) 0px, transparent 60%), 
-    radial-gradient(circle farthest-side at 100% 0%, var(--pink) 0px, transparent 50%), 
-    radial-gradient(at 0% 35%, var(--blue) 0px, transparent 50%), 
-    radial-gradient(circle farthest-side at 0% 100%, rgb(107, 102, 255) 0px, transparent 45%);
+    background-image:
+    radial-gradient(circle farthest-side at 85% -50%, var(--purple) 0%, transparent 50%),
+    radial-gradient(circle farthest-side at -30% 35%, var(--blue) 0%, transparent 80%),
+    radial-gradient(circle farthest-side at 0% 0%, rgb(255 0 227) 0%, transparent 80%),
+    radial-gradient(circle farthest-side at 0% 100%, rgb(107, 102, 255) 0%, transparent 45%);
+
+    background-color: var(--black);
 }
-.skill{
+
+.skill {
     padding: 1vw;
 
     display: flex;
@@ -59,12 +72,11 @@
     text-align: center;
     background-color: var(--white);
     font-family: "Noto Sans", sans-serif;
+    font-weight: bold;
 }
-.hidden{
-    display: none;
-}
+
 /******************menu***********************/
-.menu{
+.menu {
     display: flex;
     position: sticky;
     top: 0;
@@ -72,28 +84,32 @@
     align-items: center;
     height: var(--height_menu);
     padding: 0.3rem;
+    z-index: 1;
 }
-.menu_element{
+
+.menu_element {
     display: flex;
     align-items: center;
     margin: 0;
     height: 100%;
     border-radius: 60px;
     padding: 0 0.7vw;
-    background: #fff;
-    box-shadow:  22px 22px 62px #e2e2e2, -22px -22px 62px #ffffff;
+    background: var(--black)
 }
-.menu_element_link{
+
+.menu_element_link {
     padding: 0.7vw;
-    color: var(--black);
+    color: var(--fontColor);
     border-radius: 60px;
     transition: all 0.5s ease-in-out;
 }
-.menu_element_link:hover{
-    color: var(--purple);
+
+.menu_element_link:hover {
+    color: var(--blue);
 }
+
 /*------------------menu-mobil-----------------*/
-.menu-mobil{
+.menu-mobil {
     width: 100%;
 
     top: 0%;
@@ -102,9 +118,10 @@
     right: 0%;
     position: fixed;
 
-    background-color: #fff;
+    z-index: 1;
 }
-.menu-mobil_container{
+
+.menu-mobil_container {
     width: 100%;
     height: 100%;
 
@@ -116,16 +133,25 @@
 
     z-index: 2;
 }
-.menu-mobil_element_link{
+
+.menu-mobil_element_link {
+    margin: 2vw;
+}
+
+.menu-mobil_element_link a {
+    padding: 1.5vw;
+
     font-family: "Noto Sans", sans-serif;
     font-size: medium;
-    color: var(--black);
+    color: var(--fontColor);
+    border-radius: var(--radius);
 }
-.logo{
+
+.logo {
     padding: 2vw 3vw;
     height: 1.8rem;
 
-    top:90%;
+    top: 90%;
     left: 85%;
     position: fixed;
     display: none;
@@ -133,47 +159,54 @@
     text-align: center;
     border-radius: 50%;
     background-color: white;
-    box-shadow:  22px 22px 62px #e2e2e2, -22px -22px 62px #ffffff;
+    box-shadow: 22px 22px 62px #e2e2e2, -22px -22px 90px #ffffff;
     z-index: 2;
 }
+
 /******************landing**********************/
-.landing{
+.landing {
     height: var(--height_landing);
     width: 100%;
-    /* position: relative; */
+    position: relative;
     overflow: hidden;
 
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
-.name{
+
+.name {
     font-family: "Noto Sans", sans-serif;
     font-size: 3rem;
 }
-.landing_details{
+
+.landing_details {
     max-width: 40vw;
-    padding-left:8vw;
+    padding-left: 8vw;
 }
-.landing_logo{
-    position:absolute;
+
+.landing_logo {
+    position: absolute;
     transform: rotate(-8deg);
-    left:60%
+    left: 60%
 }
-#logo path{
+
+#logo path {
     stroke: rgba(255, 255, 255, 0.3);
     stroke-width: 10px;
     stroke-dasharray: 6458.1337890625px;
     stroke-dashoffset: 6458.1337890625px;
     animation: fill-svg 10s infinite alternate;
 }
+
 /*-----------------------botones-------------------------*/
-.socialNetwork{
+.socialNetwork {
     display: flex;
     /* position: relative; */
     transition: all 0.3s ease-in-out;
 }
-button.socialButton{
+
+button.socialButton {
     width: 40px;
     height: 34px;
     padding: 0.5rem;
@@ -187,29 +220,46 @@ button.socialButton{
     background-color: rgba(255, 255, 255, 0);
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
 }
-button.socialButton img{
+
+button.socialButton img {
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
 }
-button.socialButton span{
+
+button.socialButton span {
+    color: var(--fontColor);
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
 }
-.socialButton:hover{
+
+.socialButton:hover {
     width: auto;
     flex-direction: row;
-    background-color: rgba(255, 255, 255, 0.507);
+    background-color: var(--gray-disabled);
 }
-.socialIcon{
+
+.socialIcon {
     height: 1.5rem;
 }
-.nameSocialIcon{
-    margin-left:0.5rem;
+
+.nameSocialIcon {
+    margin-left: 0.5rem;
 }
+
 /******************animaciones**********************/
 @keyframes fill-svg {
-    to{stroke-dashoffset: 0; stroke: rgba(255, 255, 255, 0.6);}
+    to {
+        stroke-dashoffset: 0;
+        stroke: rgba(255, 255, 255, 0.6);
+    }
 }
+.fadeElement{
+    animation: fadeOut 500ms forwards;
+}
+@keyframes fadeOut {
+    to { opacity: 0; }
+}
+
 /******************about**********************/
-.about{
+.about {
     min-height: 100vh;
     padding: 3vh 0;
 
@@ -218,27 +268,32 @@ button.socialButton span{
     align-items: center;
     flex-direction: column;
 }
-.about_intro{
+
+.about_intro {
     width: var(--container-width);
 }
-.about_info{
+
+.about_info {
     display: flex;
     justify-content: space-between;
     width: 80%;
 }
-.about_info_soft-skills{
+
+.about_info_soft-skills {
     width: 100%;
-    padding:0 3vw;
+    padding: 0 3vw;
 }
-.about_soft-skills_container{
+
+.about_soft-skills_container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     align-items: center;
     justify-content: center;
     gap: 1vw;
 }
+
 /******************education**********************/
-.skills{
+.skills {
     width: var(--container-width);
     min-height: var(--height_landing);
 
@@ -246,21 +301,25 @@ button.socialButton span{
     justify-content: center;
     flex-direction: column;
 }
-.skills_container{
+
+.skills_container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     gap: 1vw;
 }
-.skills_container .skill img{
+
+.skills_container .skill img {
     height: 30px;
     margin-right: 0.5rem;
 }
-.courses_education_container{
+
+.courses_education_container {
     display: flex;
     align-items: center;
     gap: 1vw;
 }
-.courses_education_bootcamp{
+
+.courses_education_bootcamp {
     padding: 1vw;
     display: flex;
     flex-direction: column;
@@ -269,11 +328,13 @@ button.socialButton span{
     border-radius: var(--radius);
     background-color: var(--white);
 }
-.courses_education_bootcamp_logo{
+
+.courses_education_bootcamp_logo {
     height: 55px;
 }
+
 /******************proyectos**********************/
-.projects{
+.projects {
     width: var(--container-width);
     min-height: var(--height_landing);
 
@@ -281,41 +342,90 @@ button.socialButton span{
     justify-content: center;
     flex-direction: column;
 }
-.projects_container{
+
+.projects_container {
     display: flex;
+    flex-direction: column;
     gap: 1vw;
 }
-.projects_container_item{
-    width: 45%;
-}
-.projects_container_item_image{
-    width: 100%;
+.projects_container_header{
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border: solid 1px var(--white);
     border-radius: var(--radius);
 }
-.projects_container_buttons{
+.projects_container_header > input{
+    display: none;
+}
+input[name="slider"] + label{
+    padding: 0.3rem;
+    margin: 0;
+    border-radius: var(--radius);
+    transition: all 0.4s ease-in-out;
+}
+input[name="slider"]:checked + label{
+    border: solid 2px var(--white);
+}
+
+.projects_container_item {
+    width: 100%;
+    margin: 3vh 0;
+
+    display: flex;
+    align-items: center;
+}
+.projects_container_item_details{
+    margin-left: 1rem;
+}
+
+.projects_container_item_image {
+    width: 50%;
+    border-radius: var(--radius);
+}
+
+.projects_container_buttons {
     display: flex;
     gap: 1vw;
 }
-.projects_container_button{
-    padding: 0.5vw 1vw;
+/******************botones**********************/
+
+.button-default {
+    color: var(--fontColor);
+    padding: 0.5rem;
 
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--white);
     border-radius: var(--radius);
-
+    border: solid 4px var(--white);
     transition: all 0.5s ease-in-out;
 }
-.icon{
+.button-second {
+    color: var(--fontColor);
+    padding: 0.7rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius);
+    border: solid 1px var(--white);
+    transition: all 0.5s ease-in-out;
+}
+
+.icon {
     height: 1rem;
     margin-left: 0.5vw;
 }
-.projects_container_button:hover{
-    box-shadow:  15px 22px 62px #e2e2e2, -15px -22px 62px #ffffff;
+.button-second:hover {
+    box-shadow: 0px 0px 90px var(--purple);
 }
+.button-default:hover {
+    box-shadow: 0px 2px 62px var(--purple), -15px -2px 72px var(--blue);
+}
+
 /******************contacto**********************/
-.form{
+.form {
     width: var(--container-width);
     min-height: var(--height_landing);
 
@@ -323,73 +433,134 @@ button.socialButton span{
     justify-content: center;
     flex-direction: column;
 }
-.form_container{
+#form_alerts{
+    margin: 0 0 0.5rem 0;
+    color: var(--fontColor);
+    font-weight: bold;
+}
+.form_moveUp{
+    transform: rotate(-90deg);
+}
+.form_container {
     display: flex;
     flex-direction: column;
 }
-.form_field{
+
+.form_field {
     display: flex;
     flex-direction: column;
 }
-.form_field_input{
+
+.form_field_input {
     padding: 0.5rem;
     border: solid 1px var(--white);
     border-radius: var(--radius);
+    color: var(--fontColor);
 }
-.form_field_textarea{
-    padding: 0.5rem;
-    border: solid 1px var(--white);
-    border-radius: var(--radius);
+
+#message {
     height: 30%;
 }
+
 /******************breakpoints**********************/
-@media screen and (max-width:600px) {
-    .landing{
-        justify-content: center;
-    }
-    .landing_details{
-        max-width: 60vw;
-        padding: 0;
-    }
-    .landing_logo{
-        display: none;
-    }
-    .about_info{
-        flex-direction: column;
-    }
-    .about_info_personal-details{
-        margin-bottom: 5vh;
-    }
-    .about_info_soft-skills{
-        padding: 0;
-    }
-    .skills_container{
-        gap: 2vw;
-    }
-    .courses_education_container{
-        flex-direction: column;
-    }
-    .courses_education_bootcamp{
-        padding: 2vw;
-    }
-    .projects_container{
-        flex-direction: column;
-    }
+@media screen and (max-width:900px) {
     .projects_container_item{
+        width: 90%;
+        padding:0 5%;
+        flex-direction: column;
+    }
+    .projects_container_item_details{
+        margin: 0;
+    }
+    .projects_container_item_image{
         width: 100%;
     }
 }
-@media screen and (max-width:450px){
-    .menu{
+@media screen and (max-width:600px) {
+    .containerAll {
+        background-image:
+            radial-gradient(circle farthest-side at 85% 30%, var(--purple) 0px, transparent 20%),
+            radial-gradient(circle farthest-side at 100% 0%, var(--blue) 0px, transparent 20%),
+            radial-gradient(at 0% 35%, var(--blue) 0px, transparent 40%),
+            radial-gradient(circle farthest-side at 0% 100%, rgb(107, 102, 255) 0px, transparent 35%);
+    }
+
+    .menu {
         display: none;
     }
-    .logo{
+    .menu-mobil{
+        backdrop-filter: blur(50px);
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .logo {
         display: block;
     }
-    .landing_details{
+
+    .landing {
+        justify-content: center;
+    }
+
+    .landing_details {
+        max-width: 60vw;
+        padding: 0;
+    }
+
+    .landing_logo {
+        display: none;
+    }
+
+    .about_info {
+        flex-direction: column;
+    }
+
+    .about_info_personal-details {
+        margin-bottom: 5vh;
+    }
+
+    .about_info_soft-skills {
+        padding: 0;
+    }
+
+    .skills_container {
+        gap: 2vw;
+    }
+
+    .courses_education_container {
+        flex-direction: column;
+    }
+
+    .courses_education_bootcamp {
+        padding: 2vw;
+    }
+
+    .projects_container {
+        flex-direction: column;
+    }
+    section{
+        margin: 5vh 0;
+    }
+}
+@media (min-width:600px) and (orientation:lanscape){
+    section{
+        margin: 5vh 0;
+    }
+}
+@media screen and (max-width:500px) {
+    .landing_details {
         max-width: 85vw;
     }
-    .courses_education_bootcamp{
+
+    .courses_education_bootcamp {
         padding: 3vw;
     }
+
+    .projects_container_item{
+        width: 95%;
+        padding:0 2.5%;
+        flex-direction: column;
+    }
+}
+.hidden {
+    display: none;
 }

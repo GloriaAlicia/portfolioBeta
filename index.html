@@ -21,10 +21,10 @@
 	<main class="containerAll">
 		<nav class="menu">
 			<ul class="menu_element">
-				<li><a class="menu_element_link" href="#sobremi">Sobre mí</a></li>
-				<li><a class="menu_element_link" href="#educacion">Educacion</a></li>
-				<li><a class="menu_element_link" href="#proyectos">Proyectos</a></li>
-				<li><a class="menu_element_link" href="#contacto">Contacto</a></li>
+				<li><a class="menu_element_link" href="#about">Sobre mí</a></li>
+				<li><a class="menu_element_link" href="#skills">Educacion</a></li>
+				<li><a class="menu_element_link" href="#projects">Proyectos</a></li>
+				<li><a class="menu_element_link" href="#contact">Contacto</a></li>
 			</ul>
 		</nav>
 
@@ -32,14 +32,14 @@
 
 		<nav class="menu-mobil hidden" id="content">
 			<ul class="menu-mobil_container">
-				<li><a class="menu-mobil_element_link" href="#sobremi">Sobre mí</a></li>
-				<li><a class="menu-mobil_element_link" href="#educacion">Educacion</a></li>
-				<li><a class="menu-mobil_element_link" href="#proyectos">Proyectos</a></li>
-				<li><a class="menu-mobil_element_link" href="#contacto">Contacto</a></li>
+				<li class="menu-mobil_element_link"><a href="#about">Sobre mí</a></li>
+				<li class="menu-mobil_element_link"><a href="#skills">Educacion</a></li>
+				<li class="menu-mobil_element_link"><a href="#projects">Proyectos</a></li>
+				<li class="menu-mobil_element_link"><a href="#contact">Contacto</a></li>
 			</ul>
 		</nav>
-		
-		<section class="landing">
+
+		<section class="landing" id="landing">
 			<div class="landing_details">
 				<span class="name">Gloria Alicia García</span>
 				<h3 class="subtitle">Frontend Developer</h3>
@@ -213,7 +213,7 @@ M307.029663,281.680725
 			</div>
 		</section>
 
-		<section class="about" id="sobremi">
+		<section class="about" id="about">
 			<div class="about_intro margin-bottom">
 				<h2 class="title margin-bottom">Sobre mi</h2>
 				<p class="paragraph">
@@ -221,7 +221,7 @@ M307.029663,281.680725
 					En constante capacitación para aprender mejores formas de crear sitios web.
 				</p>
 			</div>
-			
+
 			<div class="about_info">
 				<div class="about_info_personal-details">
 					<h3 class="subtitle">Detalles personales</h3>
@@ -231,7 +231,7 @@ M307.029663,281.680725
 						<li> <span class="detail">Edad:</span> 19 años </li>
 					</ul>
 				</div>
-	
+
 				<div class="about_info_soft-skills">
 					<h3 class="subtitle">Habilidades blandas</h3>
 					<div class="about_soft-skills_container">
@@ -249,7 +249,7 @@ M307.029663,281.680725
 			</div>
 		</section>
 
-		<section class="skills" id="educacion">
+		<section class="skills" id="skills">
 			<h2 class="title margin-bottom">Educacion</h2>
 			<h3 class="subtitle">Habilidades</h3>
 			<div class="skills_container margin-bottom">
@@ -284,69 +284,102 @@ M307.029663,281.680725
 					<h3 class="subtitle">Formaciones en programación</h3>
 					<div class="courses_education_container">
 						<div class="courses_education_bootcamp">
-							<img class="courses_education_bootcamp_logo" src="./assets/icons/oracle-one-logo.svg" alt="ONE Oracle más Alura Latam">
-							<p>Actualmente llevo aproximadamente 3 meses en el programa ONE (Oracle Next Education) en el que estoy introduciéndome en las bases del desarrollo web.</p>
+							<img class="courses_education_bootcamp_logo" src="./assets/icons/oracle-one-logo.svg"
+								alt="ONE Oracle más Alura Latam">
+							<p>Actualmente llevo aproximadamente 3 meses en el programa ONE (Oracle Next Education) en
+								el que estoy introduciéndome en las bases del desarrollo web.</p>
 						</div>
-		
+
 						<div class="courses_education_bootcamp">
 							<img class="courses_education_bootcamp_logo" src="./assets/icons/openBootcamp.svg" alt="">
-							<p>Comenzando en OpenBootcamp para afianzar conocimientos y aprender React JS, para proximamente practicar con node js.</p>
+							<p>Comenzando en OpenBootcamp para afianzar conocimientos y aprender React JS, para
+								proximamente practicar con node js.</p>
 						</div>
 					</div>
 				</div>
 			</section>
 		</section>
 
-		<section class="projects" id="proyectos">
+		<section class="projects" id="projects">
 			<h2 class="title margin-bottom">Mis proyectos</h2>
 			<div class="projects_container">
-				<div class="projects_container_item">
-					<img class="projects_container_item_image" src="./assets/images/hangman.png" alt="juego del ahorcado">
-					<h3 class="subtitle">Juego del ahorcado</h3>
-					<p class="paragraph">
-						Challenge del programa ONE, en el que a partir de las bases se desarrolla el juego, guardando palabras en localStorage, validando la entrada de las nuevas palabras, mostrando el desarrollo del muñeco según la cantidad de vidas, entre otros pequeños desafíos en el trayecto.
-					</p>
-					<div class="projects_container_buttons">
-						<a href="https://github.com/GloriaAlicia/hangmanGame" target="_blank">
-							<button class="projects_container_button">
-								repositorio
-							</button>
-						</a>
-						<a href="https://gloriaalicia.github.io/hangmanGame/subpages/play.html" target="_blank">
-							<button class="projects_container_button">
-								Ver demo
-								<img class="icon" src="./assets/icons/arrow-right.svg" alt="ir al link de demostracion">
-							</button>
-						</a>
+				<div class="projects_container_header">
+					<input type="radio" name="slider" id="hangmanGame" value="hangmanGame">
+					<label for="hangmanGame" class="project_name">Ahorcado</label>
+
+					<input type="radio" name="slider" id="notes" value="notes">
+					<label for="notes" class="project_name">Notas</label>
+				</div>
+
+				<div class="projects_container_item hidden" id="contentHangmanGame">
+					<img class="projects_container_item_image" src="./assets/images/hangman.png"
+						alt="juego del ahorcado">
+					<div class="projects_container_item_details">
+						<h3 class="subtitle">Juego del ahorcado</h3>
+						<p class="paragraph">
+							Challenge del programa ONE, en el que a partir de las bases se desarrolla el juego,
+							guardando
+							palabras en localStorage, validando la entrada de las nuevas palabras, mostrando el
+							desarrollo
+							del muñeco según la cantidad de vidas, entre otros pequeños desafíos en el trayecto.
+						</p>
+						<div class="projects_container_buttons">
+							<a href="https://github.com/GloriaAlicia/hangmanGame" target="_blank">
+								<button class="button-second">
+									repositorio
+								</button>
+							</a>
+							<a href="https://gloriaalicia.github.io/hangmanGame/subpages/play.html" target="_blank">
+								<button class="button-default">
+									Ver demo
+									<img class="icon" src="./assets/icons/arrow-right.svg"
+										alt="ir al link de demostracion">
+								</button>
+							</a>
+						</div>
 					</div>
 				</div>
-	
-				<div class="projects_container_item">
-					<img class="projects_container_item_image" src="./assets/images/notes.png" alt="app para guardar notas">
-					<h3 class="subtitle">Notas</h3>
-					<p class="paragraph">
-						Práctica para guardar notas, implementando modo oscuro, aprendiendo a crear elementos en el DOM, modificarlos y editarlos así como la eliminación de elementos visualmente y al guardar, con el desafio extra de crear un gradiente para las notas favoritas y cambiarlo al recargar utilizando css con JavaScript
-					</p>
-					<div class="projects_container_buttons">
-						<a href="https://github.com/GloriaAlicia/appNotes" target="_blank">
-							<button class="projects_container_button">
-								repositorio
-							</button>
-						</a>
-						<a href="https://gloriaalicia.github.io/appNotes/" target="_blank">
-							<button class="projects_container_button">
-								Ver demo
-								<img class="icon" src="./assets/icons/arrow-right.svg" alt="ir al link de demostracion">
-							</button>
-						</a>
+
+				<div class="projects_container_item hidden" id="contentNotes">
+					<img class="projects_container_item_image" src="./assets/images/notes.png"
+						alt="app para guardar notas">
+					<div class="projects_container_item_details">
+						<h3 class="subtitle">Notas</h3>
+						<p class="paragraph">
+							Práctica para guardar notas, implementando modo oscuro, aprendiendo a crear elementos en el
+							DOM,
+							modificarlos y editarlos así como la eliminación de elementos visualmente y al guardar, con
+							el
+							desafio extra de crear un gradiente para las notas favoritas y cambiarlo al recargar
+							utilizando
+							css con JavaScript
+						</p>
+						<div class="projects_container_buttons">
+							<a href="https://github.com/GloriaAlicia/appNotes" target="_blank">
+								<button class="button-second">
+									repositorio
+								</button>
+							</a>
+							<a href="https://gloriaalicia.github.io/appNotes/" target="_blank">
+								<button class="button-default">
+									Ver demo
+									<img class="icon" src="./assets/icons/arrow-right.svg"
+										alt="ir al link de demostracion">
+								</button>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="form">
+		<section class="form" id="contact">
 			<h2 class="title">Formulario de contacto</h2>
-			<p class="subtitle paragraph">Me contactaré de inmediato con usted</p>
+			<a class="subtitle paragraph" href="#landing">
+				También puede ver mis redes sociales
+				<img class="form_moveUp" src="./assets/icons/arrow-right.svg" alt="ir hacia arriba">
+			</a>
+			<p id="form_alerts"></p>
 			<form class="form_container" id="form" action="https://formspree.io/f/mayvzozy" method="POST">
 
 				<div class="form_field margin-bottom">
@@ -361,20 +394,21 @@ M307.029663,281.680725
 
 				<div class="form_field margin-bottom">
 					<label for="message" class="form_label">Mensaje</label>
-					<textarea class="form_field_textarea" name="message" id="message" required></textarea>
+					<textarea class="form_field_input" name="message" id="message" required></textarea>
 				</div>
 
 				<div class="projects_container_buttons">
-					<button type="submit" class="projects_container_button" id="sendButton">
+					<button type="submit" class="button-default" id="sendButton">
 						Enviar
 					</button>
 				</div>
-				
+
 			</form>
 		</section>
 	</main>
 
 	<script src="./scripts/app.js"></script>
+	<script src="./scripts/showProjects.js"></script>
 </body>
 
 </html>

@@ -1,29 +1,38 @@
 const openMobil = document.getElementById("openMobil");
-const contentMenu = document.getElementById("content");
+const $contentMenu = document.getElementById("content");
 const $form = document.getElementById("form");
 const $sendButton = document.getElementById("sendButton");
+const $menuMobil = document.querySelector(".menu-mobil");
+const $formAlerts = document.getElementById("form_alerts");
 
 
 openMobil.addEventListener("click", ()=>{
-    contentMenu.classList.toggle("hidden");
+    $contentMenu.classList.remove("hidden");
 })
-/***************validar */
+
+$contentMenu.addEventListener("click",(e)=>{
+    if(e.target.matches(".menu-mobil_element_link a")){
+        $contentMenu.classList.add("fadeElement");
+        setTimeout(() => {
+            $contentMenu.classList.add("hidden");
+            $contentMenu.classList.remove("fadeElement");
+        }, 500);
+    }
+})
+
 function noEmptyData(inputs){
     if (inputs.length != 0){
         return  true;
      } else {
-        return false
+        return false;
      }
 }
 
 $sendButton.addEventListener("click",()=>{
     if(noEmptyData($form.name.value) && noEmptyData($form.email.value) && noEmptyData($form.message.value)){
-        alert("bien")
-        // $sendButton.disabled = false;
-    
+        $formAlerts.classList.add("hidden");
     } else {
-        alert("no estan llenos todos los campos")
-        // $sendButton.disabled = true;
+        $formAlerts.textContent = "no estan llenos todos los campos";
     }
 })
 
@@ -42,7 +51,7 @@ async function sendMenssage(e){
         }
     })
     if(response.ok){
-        alert("Gracias por contactar :)")
+        $formAlerts.textContent = "Me contactaré de inmediato con usted"
         $form.reset()
     }
 }
